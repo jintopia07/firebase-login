@@ -6,8 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+
+  void _logInWithFacebook() async {
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                   width: 220,
                 child: FloatingActionButton.extended(
                   onPressed: () {
-                    GoogleSignIn().signIn();
+                     _logInWithFacebook();
                   },
                   label: Text("Login with Facebook"),
                   icon: Image.asset(

@@ -1,5 +1,6 @@
 import 'package:firebaselogin/provider/google_sign_in.dart';
 import 'package:firebaselogin/screen/login.dart';
+import 'package:firebaselogin/screen/login_page.dart';
 import 'package:firebaselogin/screen/register.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -67,9 +68,16 @@ class HomeScreen extends StatelessWidget {
                 width: 220,
                 child: FloatingActionButton.extended(
                   onPressed: () {
-                    //final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
-                    //provider.googleLogin();
-                    GoogleSignIn().signIn();
+                    // final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
+                    // provider.googleLogin();
+                    //GoogleSignIn().signIn();
+
+                      Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return LoginPage();
+                    }));
+
+
                   },
                   label: Text("Login with Google"),
                   icon: Image.asset(
